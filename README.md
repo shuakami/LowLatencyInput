@@ -37,6 +37,17 @@
 *   **服务器端:** 运行在 PC 或中继设备上，接收来自 Android 客户端的 TCP 数据，进行解析和处理 (使用 Rust 实现)。
 *   **PC 输入驱动/模拟层:** 运行在 PC 上，接收来自服务器端处理后的指令，模拟生成键鼠、手柄输入事件 (使用 C++ 实现)。
 
+**完整解决方案组件:**
+
+下表列出了构成完整解决方案的各个开源组件：
+
+| 组件名称                 | 描述                                                                                                  | 仓库地址                                                              |
+| :----------------------- | :---------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------- |
+| `LowLatencyInput`        | **(本项目)** Android 客户端，负责捕获触摸/传感器数据并通过 TCP 发送到 PC。                             | [shuakami/LowLatencyInput](https://github.com/shuakami/LowLatencyInput) |
+| `android_usb_listener` | (推测) PC 端服务，接收来自 Android 的 TCP 数据，解析并写入共享内存。                                   | [shuakami/android_usb_listener](https://github.com/shuakami/android_usb_listener) |
+| `Fastkey`                | PC 端 Windows 客户端，读取共享内存数据（触摸、UI 事件），低延迟模拟鼠标/键盘操作。                         | [shuakami/Fastkey](https://github.com/shuakami/Fastkey)               |
+| `gyroxinput`             | PC 端 Windows 客户端，读取共享内存数据（陀螺仪、加速度计），使用 ViGEmBus 模拟虚拟 DS4 手柄的运动控制。 | [shuakami/gyroxinput](https://github.com/shuakami/gyroxinput)           |
+
 ## ⚠️ Root 权限要求与风险 ⚠️
 
 **本项目严重依赖 Root 权限才能正常运行！**
@@ -188,6 +199,3 @@ Root 权限主要用于：
 5.  Push 到你的 Feature 分支 (`git push origin feature/AmazingFeature`)。
 6.  创建 Pull Request。
 
-## 许可证
-
-本项目采用 [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) 许可证](https://creativecommons.org/licenses/by-nc-sa/4.0/)。
