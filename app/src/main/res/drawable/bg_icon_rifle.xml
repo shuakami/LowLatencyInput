@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 背景：半透明黑色矩形，无边框 -->
+    <item>
+        <shape android:shape="rectangle">
+            <!-- Fill color (semi-transparent black) -->
+            <solid android:color="#80000000"/>
+            <!-- Removed rounded corners -->
+            <!-- <corners android:radius="4dp"/> --> 
+            <!-- No border -->
+        </shape>
+    </item>
+
+    <!-- 前景：居中显示步枪图标 -->
+    <!-- Note: Using tfui_icon_rifle_akm -->
+    <item
+        android:drawable="@drawable/tfui_icon_rifle_akm"
+        android:gravity="center"
+        android:width="75dp"
+        android:height="25dp">
+        <!-- Adjusted fixed width and height while maintaining aspect ratio -->
+    </item>
+
+</layer-list> 

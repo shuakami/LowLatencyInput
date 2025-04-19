@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 背景：圆角矩形，半透明红色填充 -->
+    <item>
+        <shape android:shape="rectangle">
+            <!-- Fill color (semi-transparent red) -->
+            <solid android:color="#80F44336"/> 
+            <!-- Rounded corners -->
+            <corners android:radius="8dp"/> 
+        </shape>
+    </item>
+
+    <!-- 前景：居中显示关闭小图标 -->
+    <item
+        android:drawable="@drawable/ic_close_small" 
+        android:gravity="center"
+        android:width="16dp" 
+        android:height="16dp">
+        <!-- Explicitly set tint for the icon if needed, e.g., white -->
+        <!-- android:tint="@android:color/white" --> 
+    </item>
+
+</layer-list> 

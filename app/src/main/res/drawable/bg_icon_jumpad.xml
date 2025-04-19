@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 背景：圆角矩形，半透明黑色填充，无边框 -->
+    <item>
+        <shape android:shape="rectangle">
+            <!-- 背景填充色 (半透明黑色) -->
+            <solid android:color="#80000000"/>
+            <!-- 圆角 (示例：4dp，可以调整) -->
+            <corners android:radius="4dp"/>
+            <!-- 无边框 -->
+        </shape>
+    </item>
+
+    <!-- 前景：居中显示跳板图标 -->
+    <item
+        android:drawable="@drawable/tfui_icon_jumpad" 
+        android:gravity="center"
+        android:width="24dp"
+        android:height="24dp"> <!-- 图标大小，可以调整 -->
+    </item>
+
+</layer-list> 

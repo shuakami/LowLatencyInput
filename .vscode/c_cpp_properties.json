@@ -1,0 +1,23 @@
+{
+    "configurations": [
+        {
+            "name": "Android",
+            "includePath": [
+                "${workspaceFolder}/app/src/main/cpp/**",
+                "${workspaceFolder}/app/.cxx/**",
+                "E:/Users/Shuakami/AppData/Local/Android/Sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include",
+                "E:/Users/Shuakami/AppData/Local/Android/Sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/aarch64-linux-android",
+                "E:/Users/Shuakami/AppData/Local/Android/Sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1",
+                "${default}"
+            ],
+            "defines": [
+                "ANDROID"
+            ],
+            "compilerPath": "E:/Users/Shuakami/AppData/Local/Android/Sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/windows-x86_64/bin/clang++.exe", // *** 根据 NDK 路径填充 ***
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "clang-x64"
+        }
+    ],
+    "version": 4
+} 

@@ -1,0 +1,59 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.LowLatencyInput" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Apply M3 Baseline colors -->
+        <item name="colorPrimary">@color/md_theme_light_primary</item>
+        <item name="colorOnPrimary">@color/md_theme_light_onPrimary</item>
+        <item name="colorPrimaryContainer">@color/md_theme_light_primaryContainer</item>
+        <item name="colorOnPrimaryContainer">@color/md_theme_light_onPrimaryContainer</item>
+        <item name="colorSecondary">@color/md_theme_light_secondary</item>
+        <item name="colorOnSecondary">@color/md_theme_light_onSecondary</item>
+        <item name="colorSecondaryContainer">@color/md_theme_light_secondaryContainer</item>
+        <item name="colorOnSecondaryContainer">@color/md_theme_light_onSecondaryContainer</item>
+        <item name="colorTertiary">@color/md_theme_light_tertiary</item>
+        <item name="colorOnTertiary">@color/md_theme_light_onTertiary</item>
+        <item name="colorTertiaryContainer">@color/md_theme_light_tertiaryContainer</item>
+        <item name="colorOnTertiaryContainer">@color/md_theme_light_onTertiaryContainer</item>
+        <item name="colorError">@color/md_theme_light_error</item>
+        <item name="colorOnError">@color/md_theme_light_onError</item>
+        <item name="colorErrorContainer">@color/md_theme_light_errorContainer</item>
+        <item name="colorOnErrorContainer">@color/md_theme_light_onErrorContainer</item>
+        <item name="android:colorBackground">@color/md_theme_light_background</item>
+        <item name="colorOnBackground">@color/md_theme_light_onBackground</item>
+        <item name="colorSurface">@color/md_theme_light_surface</item>
+        <item name="colorOnSurface">@color/md_theme_light_onSurface</item>
+        <item name="colorSurfaceVariant">@color/md_theme_light_surfaceVariant</item>
+        <item name="colorOnSurfaceVariant">@color/md_theme_light_onSurfaceVariant</item>
+        <item name="colorOutline">@color/md_theme_light_outline</item>
+        <item name="colorOutlineVariant">@color/md_theme_light_outlineVariant</item>
+        <item name="colorSurfaceInverse">@color/md_theme_light_inverseSurface</item>
+        <item name="colorOnSurfaceInverse">@color/md_theme_light_inverseOnSurface</item>
+        <item name="colorPrimaryInverse">@color/md_theme_light_inversePrimary</item>
+        <!-- <item name="colorSurfaceTint">@color/md_theme_light_surfaceTint</item> -->
+        <!-- <item name="colorScrim">@color/md_theme_light_scrim</item> -->
+
+        <!-- Status bar color - Use surface color for a seamless look -->
+        <item name="android:statusBarColor">@color/md_theme_light_surface</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="M">true</item> <!-- Make status bar icons dark on light background -->
+
+        <!-- Navigation bar color (optional) -->
+        <!-- <item name="android:navigationBarColor">@color/md_theme_light_surface</item> -->
+        <!-- <item name="android:windowLightNavigationBar" tools:targetApi="O_MR1">true</item> --> <!-- Make navigation bar icons dark -->
+        
+        <!-- Dynamic Color Support (requires API 31+) -->
+        <!-- This theme will automatically adapt to Material You colors on API 31+ -->
+        <!-- If you want to force disable dynamic color, you can override colors here -->
+
+        <!-- Explicitly set Custom Snackbar styles -->
+        <item name="snackbarStyle">@style/Widget.MyApp.Snackbar</item>
+        <item name="snackbarButtonStyle">@style/Widget.MyApp.Snackbar.Button</item>
+        <item name="snackbarTextViewStyle">@style/Widget.MyApp.Snackbar.TextView</item>
+
+    </style>
+
+    <!-- You can create a separate theme for API 31+ to explicitly use dynamic colors -->
+    <!-- <style name="Theme.LowLatencyInput.Dynamic" parent="Theme.Material3.DynamicColors.DayNight"> -->
+        <!-- Add any specific overrides if needed -->
+    <!-- </style> -->
+
+</resources>

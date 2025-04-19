@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- 申请网络访问权限，用于通过 ADB 端口转发 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- 申请前台服务权限 -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+
+    <!-- 如果目标 API ≥ 34 且需要特殊类型前台服务 -->
+    <!-- <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" /> -->
+
+    <!-- 申请高采样率传感器权限 -->
+    <uses-permission android:name="android.permission.HIGH_SAMPLING_RATE_SENSORS" />
+
+    <!-- 申请悬浮窗权限 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <application
+        android:name=".MainApplication"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.LowLatencyInput"
+        tools:targetApi="31">
+        
+        <!-- 主 Activity，导出为入口点，使用 singleTop 避免重复实例 -->
+        <activity
+            android:name=".ui.MainActivity"
+            android:exported="true"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- GyroscopeService 用于处理陀螺仪数据的前台服务示例 -->
+        <service
+            android:name=".service.GyroscopeService"
+            android:enabled="true"
+            android:exported="false">
+        </service>
+
+        <!-- OverlayService 用于在界面上显示悬浮窗的服务 -->
+        <service
+            android:name=".service.OverlayService"
+            android:enabled="true"
+            android:exported="false"
+            android:theme="@style/Theme.LowLatencyInput" />
+        
+        <!-- RuntimeOverlayService 用于动态加载和管理悬浮窗元素的服务 -->
+        <service
+            android:name=".service.RuntimeOverlayService"
+            android:exported="false" />
+            
+        <!-- 新增：布局编辑器 Activity -->
+        <activity
+            android:name=".ui.OverlayEditorActivity"
+            android:exported="false" 
+            android:label="编辑布局"/> 
+            
+    </application>
+</manifest>

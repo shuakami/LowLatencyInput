@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 背景：半透明黑色圆形，灰色描边 -->
+    <item>
+        <shape android:shape="oval">
+            <!-- Fill color (修改为半透明黑色) -->
+            <solid android:color="#80000000"/> 
+            <!-- Border color and width -->
+            <stroke android:width="1dp" android:color="#FFCCCCCC" /> 
+        </shape>
+    </item>
+
+    <!-- 前景：居中显示准星图标 -->
+    <!-- Note: Using tfui_reticle_crosshair -->
+    <item
+        android:drawable="@drawable/tfui_reticle_crosshair"
+        android:gravity="center"
+        android:width="24dp" 
+        android:height="24dp">
+    </item>
+
+</layer-list> 

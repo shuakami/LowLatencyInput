@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 背景：半透明黑色圆形，灰色描边 -->
+    <item>
+        <shape android:shape="oval">
+            <!-- 背景填充色 (示例：半透明黑色) -->
+            <solid android:color="#80000000"/>
+            <!-- 边框 (示例：1dp 灰色) -->
+            <stroke
+                android:width="1dp"
+                android:color="#88CCCCCC"/>
+        </shape>
+    </item>
+
+    <!-- 前景：居中显示手雷图标 -->
+    <item
+        android:drawable="@drawable/tfui_icon_grenade"
+        android:gravity="center"
+        android:width="24dp" 
+        android:height="24dp"> <!-- 图标大小，可以调整 -->
+    </item>
+
+</layer-list> 

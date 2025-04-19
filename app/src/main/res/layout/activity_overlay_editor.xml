@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true" 
+    tools:context=".ui.OverlayEditorActivity">
+
+    <!-- Canvas View drawn first, occupies full screen -->
+    <com.luoxiaohei.lowlatencyinput.ui.editor.EditingCanvasView
+        android:id="@+id/editingCanvas"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        /> 
+        <!-- Removed app:layout_behavior -->
+
+    <!-- AppBarLayout drawn on top, with scroll flags -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout" 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorSurface"
+        style="@style/Widget.Material3.AppBarLayout">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/editorToolbar"
+            style="@style/Widget.Material3.Toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="编辑布局"
+            app:navigationIcon="@drawable/ic_close"
+            app:menu="@menu/overlay_editor_menu"
+            app:layout_scrollFlags="scroll|enterAlways|snap" /> 
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- NEW: Slider Control Panel (initially hidden) -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/sliderPanel"
+        android:layout_width="420dp" 
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal" 
+        android:layout_marginBottom="16dp"
+        
+        app:cardElevation="0dp" 
+        app:contentPadding="12dp" 
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Opacity Slider -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="透明度"
+                android:textAppearance="?attr/textAppearanceLabelMedium"/>
+            <com.google.android.material.slider.Slider
+                android:id="@+id/slider_alpha_panel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-24dp" 
+                android:paddingTop="0dp" 
+                android:paddingBottom="0dp" 
+                android:valueFrom="0.0"
+                android:valueTo="1.0"
+                android:stepSize="0.05"
+                android:value="1.0"
+                app:labelBehavior="withinBounds" />
+
+            <!-- Size Slider -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp" 
+                android:text="大小 (%)"
+                android:textAppearance="?attr/textAppearanceLabelMedium"/>
+            <com.google.android.material.slider.Slider
+                android:id="@+id/slider_size_panel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-24dp" 
+                android:paddingTop="0dp" 
+                android:paddingBottom="0dp" 
+                android:valueFrom="0.5" 
+                android:valueTo="5.0" 
+                android:stepSize="0.05"
+                android:value="1.0"
+                app:labelBehavior="withinBounds" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Container for bottom-right buttons -->
+    <LinearLayout
+        android:id="@+id/bottomButtonsContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:gravity="end" >
+
+        <!-- Save Button -->
+        <Button
+            android:id="@+id/buttonSaveLayout"
+            style="@style/Widget.Material3.Button.TonalButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="保存"
+            app:icon="@drawable/ic_save"
+            android:layout_marginBottom="8dp" /> 
+
+        <!-- Add Button (matching Save style) -->
+        <Button
+            android:id="@+id/fabAddElement" 
+            style="@style/Widget.Material3.Button.TonalButton" 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="添加"
+            android:contentDescription="添加元素"
+            app:icon="@drawable/ic_add" /> 
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout> 

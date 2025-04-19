@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_delete_element"
+        android:title="删除"
+        android:icon="@drawable/ic_delete"
+        app:showAsAction="ifRoom"
+        android:visible="false" />
+    <item
+        android:id="@+id/action_toggle_ui_visibility"
+        android:title="切换界面显隐"
+        android:icon="@drawable/ic_visibility_off" 
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_preview_overlay"
+        android:title="预览"
+        android:icon="@drawable/ic_visibility" 
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_save_layout"
+        android:title="保存"
+        android:icon="@drawable/ic_save" 
+        app:showAsAction="ifRoom" />
+</menu> 

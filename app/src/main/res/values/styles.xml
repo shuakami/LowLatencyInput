@@ -1,0 +1,41 @@
+<resources>
+    <!-- Custom Shape for Snackbar -->
+    <style name="ShapeAppearance.MyApp.Snackbar" parent="ShapeAppearance.Material3.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">12dp</item> <!-- Adjust corner radius as desired -->
+        <!-- Optional: Add a subtle border -->
+        <!-- 
+        <item name="strokeWidth">1dp</item>
+        <item name="strokeColor">?attr/colorOutlineVariant</item> 
+        -->
+    </style>
+
+    <!-- Custom Snackbar Style -->
+    <style name="Widget.MyApp.Snackbar" parent="Widget.Material3.Snackbar">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.MyApp.Snackbar</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.MyApp.Snackbar</item>
+        <!-- Adjust elevation for shadow - Reduced for softer effect -->
+        <item name="android:elevation">2dp</item>
+    </style>
+
+    <!-- Custom Snackbar Text Style -->
+    <style name="Widget.MyApp.Snackbar.TextView" parent="Widget.Material3.Snackbar.TextView">
+        <!-- You can customize text appearance here if needed -->
+        <!-- <item name="android:textColor">?attr/colorOnSurfaceInverse</item> --> 
+    </style>
+
+    <!-- Custom Snackbar Button Style -->
+    <style name="Widget.MyApp.Snackbar.Button" parent="Widget.Material3.Button.TextButton.Snackbar">
+        <!-- Customize button text color if needed -->
+        <!-- <item name="android:textColor">?attr/colorPrimaryInverse</item> --> 
+    </style>
+
+    <!-- Custom Snackbar Theme Overlay (Day) -->
+    <style name="ThemeOverlay.MyApp.Snackbar" parent="ThemeOverlay.Material3.Snackbar">
+        <!-- Use specific light theme colors directly -->
+        <item name="colorSurface">@color/md_theme_light_surfaceContainerHigh</item>
+        <item name="colorOnSurface">@color/md_theme_light_onSurface</item>
+        <item name="colorPrimary">@color/md_theme_light_primary</item> <!-- For action button -->
+    </style>
+
+</resources> 
