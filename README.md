@@ -44,7 +44,7 @@
 | 组件名称                 | 描述                                                                                                  | 仓库地址                                                              |
 | :----------------------- | :---------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------- |
 | `LowLatencyInput`        | **(本项目)** Android 客户端，负责捕获触摸/传感器数据并通过 TCP 发送到 PC。                             | [shuakami/LowLatencyInput](https://github.com/shuakami/LowLatencyInput) |
-| `android_usb_listener` | (推测) PC 端服务，接收来自 Android 的 TCP 数据，解析并写入共享内存。                                   | [shuakami/android_usb_listener](https://github.com/shuakami/android_usb_listener) |
+| `android_usb_listener` | PC 端服务，接收来自 Android 的 TCP 数据，解析并写入共享内存。                                   | [shuakami/android_usb_listener](https://github.com/shuakami/android_usb_listener) |
 | `Fastkey`                | PC 端 Windows 客户端，读取共享内存数据（触摸、UI 事件），低延迟模拟鼠标/键盘操作。                         | [shuakami/Fastkey](https://github.com/shuakami/Fastkey)               |
 | `gyroxinput`             | PC 端 Windows 客户端，读取共享内存数据（陀螺仪、加速度计），使用 ViGEmBus 模拟虚拟 DS4 手柄的运动控制。 | [shuakami/gyroxinput](https://github.com/shuakami/gyroxinput)           |
 
